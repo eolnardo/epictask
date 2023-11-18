@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https:thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>The Eras Tour - Taylor Swift</h1>
+    <a href="/task/new" class="btn">Nova Tarefa</a>
+
+    <div class="content">
+        <div class="tasks">
+            <div class="card-task" th:each="task : ${tasks}">
+                <h2 th:text="${task.title}"></h2>
+                <h2 th:text="${task.description}"></h2>
+                <h2 th:text="${task.score}"></h2>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
